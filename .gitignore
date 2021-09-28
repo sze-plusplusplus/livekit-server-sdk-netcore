@@ -1,0 +1,4 @@
+bin/
+obj/
+.livekit_config.yml
+appsettings.json

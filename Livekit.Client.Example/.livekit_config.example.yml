@@ -1,0 +1,23 @@
+port: 7880
+grpc_port: 7886
+disable_twirp: true
+
+# log level, valid values: debug, info, warning, error
+log_level: info
+
+rtc:
+  tcp_port: 7881
+  use_external_ip: false
+  udp_port: 7882
+
+room:
+  max_participants: 10
+  enable_remote_unmute: false
+
+webhook:
+  api_key: test
+  urls:
+    - http://example
+
+keys:
+  test: EXAMPLElgnfIrYsA8C8vZ0n53rqKCWsm

@@ -1,0 +1,30 @@
+version: "3.4"
+
+networks:
+  app:
+
+services:
+  livekit:
+    image: ghcr.io/bencebaranyai/livekit-server
+    command: --dev --config /config.yml
+    ports:
+      - "127.0.0.1:7880:7880"
+      - "127.0.0.1:7881:7881"
+      - "127.0.0.1:7882:7882/udp"
+    networks:
+      - app
+    volumes:
+      - ./.livekit_config.yml:/config.yml
+
+  example:
+    build:
+      context: ../
+      dockerfile: ./Livekit.Client.Example/Dockerfile
+    depends_on:
+      - livekit
+    # ports:
+    #  - "127.0.0.1:80:80"
+    networks:
+      - app
+    volumes:
+      - ./:/src

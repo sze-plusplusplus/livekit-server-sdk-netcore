@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>LiveKit.Client</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageOutputPath>./pkg</PackageOutputPath>
+
+    <Authors>Bence Baranyai</Authors>
+    <Description>LiveKit Server SDK for .net core</Description>
+    <Version>0.1.0</Version>
+    <Copyright>Copyright 2021 © Bence Baranyai</Copyright>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Protobuf Include="Proto\*.proto" GrpcServices="Client" ProtoRoot="Proto\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.17.3" />
+    <PackageReference Include="Grpc.Net.Client" Version="2.38.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.28.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.12.0" />
+  </ItemGroup>
+</Project>
