@@ -1,4 +1,6 @@
 bin/
 obj/
+pkg/
 .livekit_config.yml
 appsettings.json
+.nuget

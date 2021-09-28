@@ -9,15 +9,17 @@
 
     <Authors>Bence Baranyai</Authors>
     <Description>LiveKit Server SDK for .net core</Description>
-    <Version>0.1.0</Version>
+    <Version>0.1.1</Version>
     <Copyright>Copyright 2021 © Bence Baranyai</Copyright>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <RepositoryUrl>https://github.com/</RepositoryUrl>
+    <RepositoryUrl>https://github.com/sze-plusplusplus/livekit-server-sdk-netcore</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
     <Protobuf Include="Proto\*.proto" GrpcServices="Client" ProtoRoot="Proto\" />
+    <None Include="../README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
   <ItemGroup>
