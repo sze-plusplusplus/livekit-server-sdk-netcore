@@ -38,20 +38,14 @@ namespace Livekit.Client
         /// <param name="outputRTMP">Output to RTMP server</param>
         /// <param name="options">Record options (Preset/Resolution/Bitrate)</param>
         /// <returns>The ID of the started recording (to be able to stop it)</returns>
-        public string StartRecording(RecordingTemplate inputTemplate = null, string inputUrl = null, string outputFile = null, string outputS3 = null, string outputRTMP = null, RecordingOptions options = null)
+        public string StartRecording(RecordingTemplate inputTemplate = null, string inputUrl = null, string filepath = null, string outputS3 = null, RtmpOutput outputRTMP = null, RecordingOptions options = null)
         {
             var req = new StartRecordingRequest()
             {
-                Input = new RecordingInput()
-                {
-                    Template = inputTemplate,
-                    Url = inputUrl
-                },
-                Output = new RecordingOutput()
-                {
-                    Rtmp = outputRTMP,
-                    S3Path = outputS3
-                },
+                Filepath = filepath,
+                Rtmp = outputRTMP,
+                Template = inputTemplate,
+                Url = inputUrl,
                 Options = options
             };
             return ServiceClient.StartRecording(req, Token.GetAsHeader()).RecordingId;

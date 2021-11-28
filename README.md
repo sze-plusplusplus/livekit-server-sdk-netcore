@@ -9,6 +9,7 @@ Docker image for the custom build: `docker pull ghcr.io/bencebaranyai/livekit-se
 | Protocol | SDK   |
 | -------- | ----- |
 | 0.9.4    | 0.1.1 |
+| 0.10.2   | 0.1.2 |
 
 > Protocol: https://github.com/livekit/protocol
 
@@ -19,13 +20,13 @@ Docker image for the custom build: `docker pull ghcr.io/bencebaranyai/livekit-se
 Package: https://www.nuget.org/packages/Livekit.Client/
 
 ```
-Install-Package Livekit.Client -Version 0.1.1
+Install-Package Livekit.Client -Version 0.1.2
 ```
 
 or
 
 ```
-dotnet add package Livekit.Client --version 0.1.1
+dotnet add package Livekit.Client --version 0.1.2
 ```
 
 ## Usage
